@@ -1,0 +1,126 @@
+.prices-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.prices-header {
+    margin-bottom: 24px;
+}
+
+.prices-header h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.search-bar {
+    width: 100%;
+    max-width: 400px;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-bar input:focus {
+    border-color: var(--primary-color);
+}
+
+.prices-table-container {
+    background-color: var(--background);
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.prices-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.prices-table th {
+    padding: 16px;
+    text-align: left;
+    font-weight: 500;
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    user-select: none;
+}
+
+.prices-table th:hover {
+    color: var(--primary-color);
+}
+
+.prices-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.crypto-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.crypto-name-cell img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.crypto-name-cell .name {
+    font-weight: 500;
+    display: block;
+}
+
+.crypto-name-cell .symbol {
+    color: var(--text-secondary);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.positive {
+    color: var(--positive);
+}
+
+.negative {
+    color: var(--negative);
+}
+
+.trade-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.trade-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+    .prices-container {
+        padding: 16px;
+    }
+
+    .prices-table th,
+    .prices-table td {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .crypto-name-cell .symbol {
+        display: none;
+    }
+}

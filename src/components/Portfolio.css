@@ -1,0 +1,258 @@
+.portfolio-container {
+    padding: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-summary {
+    background-color: var(--background);
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.summary-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.summary-header h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.timeframe-selector {
+    display: flex;
+    gap: 8px;
+}
+
+.timeframe-btn {
+    padding: 8px 16px;
+    border: none;
+    background: none;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.timeframe-btn:hover {
+    background-color: var(--surface);
+}
+
+.timeframe-btn.active {
+    background-color: var(--surface);
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.total-value {
+    margin-bottom: 24px;
+}
+
+.total-value h2 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.profit {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.profit.positive {
+    color: var(--positive);
+}
+
+.profit.negative {
+    color: var(--negative);
+}
+
+.percentage {
+    margin-left: 8px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.portfolio-chart {
+    height: 300px;
+    margin-bottom: 24px;
+}
+
+.chart-placeholder {
+    height: 100%;
+    background-color: var(--surface);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+}
+
+.assets-section {
+    background-color: var(--background);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.assets-section h2 {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+
+.assets-list {
+    display: grid;
+    gap: 16px;
+}
+
+.asset-card {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.asset-card:hover {
+    transform: translateY(-2px);
+}
+
+.asset-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.asset-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.asset-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.asset-info {
+    flex: 1;
+}
+
+.asset-info h3 {
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.asset-amount {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.asset-value {
+    text-align: right;
+}
+
+.current-value {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.asset-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 16px;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-item .label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.detail-item .value {
+    font-weight: 500;
+}
+
+.asset-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.action-btn {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.action-btn.buy {
+    background-color: var(--positive);
+    color: white;
+}
+
+.action-btn.sell {
+    background-color: var(--negative);
+    color: white;
+}
+
+.action-btn.trade {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        padding: 16px;
+    }
+
+    .summary-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .timeframe-selector {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+
+    .total-value h2 {
+        font-size: 28px;
+    }
+
+    .asset-details {
+        grid-template-columns: 1fr;
+    }
+
+    .asset-actions {
+        flex-direction: column;
+    }
+}
+
+.custom-tooltip {
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border);
+}
+
+.tooltip-time {}
